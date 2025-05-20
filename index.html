@@ -11,14 +11,29 @@
     ::selection { background: #ffe066; }
     html { scroll-behavior: smooth;}
     body, html { overflow-x: hidden; }
+    .animate-fade-in { animation: fadeIn 0.9s cubic-bezier(0.4,0,0.2,1);}
+    @keyframes fadeIn {from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:translateY(0);}}
   </style>
 </head>
 <body class="bg-gradient-to-br from-indigo-50 via-white to-yellow-50 min-h-screen">
-  <div class="w-full min-h-screen flex">
-    <!-- Sidebar (fixe, bloc select hors scrollable, nav scrollable, footer sticky) -->
-    <aside class="hidden md:flex fixed left-0 top-0 w-80 h-screen bg-white/90 shadow-2xl rounded-r-3xl border-r border-gray-100 z-20">
+  <div class="w-full min-h-screen flex relative">
+
+    <!-- Hamburger bouton mobile -->
+    <button id="sidebarToggle" class="fixed top-4 left-4 z-40 md:hidden bg-white/80 shadow rounded-full p-2 flex items-center justify-center border border-gray-200">
+      <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Overlay (clique dehors pour fermer) -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-40 z-30 transition-opacity duration-200 opacity-0 pointer-events-none md:hidden"></div>
+
+    <!-- Sidebar : toujours fixed à gauche -->
+    <aside id="sidebar"
+      class="fixed left-0 top-0 w-80 max-w-[92vw] h-screen bg-white/95 shadow-2xl rounded-r-3xl border-r border-gray-100 z-40
+      flex-col h-full hidden md:block">
       <div class="flex flex-col h-full w-full">
-        <h2 class="text-3xl font-bold mb-6 text-indigo-600 tracking-tight px-8 pt-8">Cours by Coraillon</h2>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6 text-indigo-600 tracking-tight px-8 pt-8">Cours by Coraillon</h2>
         <!-- Bloc "Choisir un cours" (hors scrollable) -->
         <div class="mb-5 px-8">
           <label class="block mb-2 text-indigo-700 text-sm font-semibold tracking-wide">
@@ -72,6 +87,29 @@
   </div>
 
   <script>
+    // Drawer mobile logic
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    function openSidebar() {
+      sidebar.classList.remove('hidden');
+      sidebarOverlay.style.opacity = 1;
+      sidebarOverlay.classList.remove('pointer-events-none');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSidebar() {
+      sidebar.classList.add('hidden');
+      sidebarOverlay.style.opacity = 0;
+      sidebarOverlay.classList.add('pointer-events-none');
+      document.body.style.overflow = '';
+    }
+    sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    // Ferme la sidebar au resize si écran > md
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) closeSidebar();
+    });
+
     // --- CONFIGURATION DES COURS ---
     const courses = {
       "mix-rap": {
@@ -193,6 +231,7 @@
           a.onclick = function(e) {
             e.preventDefault();
             loadSection(section.id);
+            if (window.innerWidth < 768) closeSidebar(); // auto ferme drawer sur mobile
           };
           li.appendChild(a);
           ul.appendChild(li);
@@ -215,7 +254,7 @@
     function wrapSectionContent(html, sectionId) {
       if (html.includes("ctn-section")) return html;
       return `
-      <section id="${sectionId}" class="ctn-section bg-white/95 rounded-2xl shadow-lg border border-gray-100 p-8 mb-5 transition animate-fade-in">
+      <section id="${sectionId}" class="ctn-section bg-white/95 rounded-2xl shadow-lg border border-gray-100 p-4 md:p-8 mb-5 transition animate-fade-in">
         ${html}
       </section>
       `;
@@ -272,6 +311,7 @@
           </div>
         `;
         window.location.hash = "";
+        if (window.innerWidth < 768) closeSidebar();
       });
 
       // Navigation au chargement

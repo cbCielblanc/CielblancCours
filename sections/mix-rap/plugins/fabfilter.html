@@ -1,0 +1,112 @@
+<section id="plugins-fabfilter" class="bg-white rounded-2xl shadow-md p-8">
+  <h2 class="text-2xl font-semibold text-indigo-700 mb-2">
+    Plugins FabFilter – Précision numérique (Pro-Q 3, Pro-C 2, Pro-R, Saturn 2, etc.)
+  </h2>
+  <div class="text-gray-700 space-y-6">
+
+    <p>
+      FabFilter est réputé pour ses plugins à l’interface épurée et aux possibilités extrêmement puissantes et transparentes. Ils sont devenus des standards modernes en mixage grâce à leur qualité sonore et leur flexibilité. Voici comment les utiliser efficacement sur une voix rap :
+    </p>
+
+    <!-- Pro-Q 3 -->
+    <h3 class="text-lg font-semibold text-indigo-600 mb-1">🎚️ FabFilter Pro-Q 3 – Égaliseur paramétrique/dynamique de pointe</h3>
+    <ul class="list-disc list-inside space-y-1 mb-3">
+      <li>
+        <b>Nettoyage précis :</b> Utilisez Pro-Q 3 en début de chaîne pour l’égalisation soustractive chirurgicale. Activez l’affichage du spectre en temps réel pour repérer rapidement les fréquences problématiques. Par exemple, si vous repérez un ronflement bas vers 50 Hz, placez une coupe raide à ~70 Hz pour supprimer tout bruit de fond en dessous de la voix. Pour un pic de résonance nasale vers 250–300 Hz, créez un notch (cloche à Q élevé) et réduisez quelques dB dans cette zone pour clarifier le timbre.
+      </li>
+      <li>
+        <b>Égalisation dynamique :</b> C’est une fonctionnalité phare du Pro-Q 3. Par exemple, si la voix est généralement claire mais présente une dureté autour de 4 kHz sur certains mots appuyés, utilisez une bande en mode Dynamic sur 4 kHz. Elle ne réduira que de -3/-4 dB quand ce registre dépasse un seuil. Cela sert aussi de de-esser intelligent, par exemple une bande vers 7 kHz en Dynamic Bell qui atténue les “S” uniquement lorsqu’ils sont trop forts.
+      </li>
+      <li>
+        <b>Filtre passe-haut et coupe-haut doux :</b> En fin de chaîne vocale, on peut insérer un Pro-Q 3 pour l’égalisation additive subtile. Un high-shelf au-dessus de 10 kHz (+2 dB) peut ajouter de l’air si nécessaire, tandis qu’un low-shelf vers 120 Hz (-1 ou -2 dB) peut équilibrer une voix trop épaisse dans les graves. Ces ajustements se font après compression et traitement de la voix.
+      </li>
+    </ul>
+    <p>
+      Pro-Q 3 permet aussi de visualiser le spectre d’une autre piste (fonction "collision" avec plusieurs instances) – pratique pour voir si la voix empiète sur la caisse claire ou un synthé, et réduire les masquages de fréquence en temps réel.
+    </p>
+    <div class="bg-indigo-50 rounded-xl p-4 text-sm mb-2">
+      <b>Astuce :</b> Essayez la fonction <b>EQ Match</b> du Pro-Q 3 si vous voulez rapprocher le timbre de votre voix d’une référence (par exemple, une voix de rappeur US). Le plugin propose une courbe pour approcher le spectre cible : à utiliser subtilement, mais ça peut aider à trouver une direction.
+    </div>
+
+    <!-- Pro-C 2 -->
+    <h3 class="text-lg font-semibold text-indigo-600 mb-1">🦾 FabFilter Pro-C 2 – Compresseur ultra-polyvalent</h3>
+    <ul class="list-disc list-inside space-y-1 mb-3">
+      <li>
+        <b>Mode Vocal / Clean :</b> Le mode Vocal est conçu pour la voix et ajuste automatiquement certains timings pour préserver la clarté. Commencez avec ce mode et un ratio modéré (3:1), threshold pour obtenir 3–5 dB de réduction sur les passages forts, attaque ~5 ms, release ~100 ms. Le mode Clean est très transparent si vous ne souhaitez aucune coloration.
+      </li>
+      <li>
+        <b>Contrôle avancé :</b> Pro-C 2 permet de régler la knee (coude) de compression pour adoucir l’action, le lookahead (jusqu’à 20 ms) pour anticiper les transitoires, et le Hold pour empêcher le compresseur de relâcher trop vite après un pic bref. Utile pour éviter le pompage sur des syllabes courtes.
+      </li>
+      <li>
+        <b>Sidechain interne/externe :</b> Pour la voix rap, utilisez surtout le sidechain interne EQ pour que le compresseur réagisse moins aux basses fréquences (filtre sidechain à 100 Hz). Le sidechain externe serait utilisé pour compresser la voix en fonction d’un autre signal (rare sur la voix lead).
+      </li>
+      <li>
+        <b>Modes de compression :</b> Pro-C 2 brille par sa transparence (mode Clean) et sa musicalité en modes Classic ou Opto (comportement vintage). Opto ressemble à un LA-2A, idéal pour une compression douce supplémentaire. Punch ou Pumping peuvent être utiles sur des ad-libs ou pour un effet perceptible de pompage rythmique.
+      </li>
+    </ul>
+    <div class="bg-indigo-50 rounded-xl p-4 text-sm mb-2">
+      <b>Astuce :</b> Utilisez le preset "Vocal Compression" comme point de départ puis affinez à l’oreille. Le vu-mètre de réduction de gain est votre allié pour viser une compression modérée – une surcompression détruit la vitalité d’une performance. Surveillez aussi le niveau de sortie pour ne pas déséquilibrer le mix.
+    </div>
+
+    <!-- Pro-R -->
+    <h3 class="text-lg font-semibold text-indigo-600 mb-1">🎼 FabFilter Pro-R – Réverbération algorithmique</h3>
+    <ul class="list-disc list-inside space-y-1 mb-3">
+      <li>
+        <b>Ambiance naturelle maîtrisée :</b> Contrairement aux Valhalla (très typées vintage), Pro-R vise une réverbération transparente et musicale. Idéal pour replacer la voix dans un léger espace sans que cela ne s’entende trop. Utilisez un preset “Vocal Room” avec un Decay autour de 1 s et un prédélai de 20 ms pour simuler un petit studio et lier la voix au mix.
+      </li>
+      <li>
+        <b>Decay Rate EQ :</b> Fonction phare qui permet d’ajuster la durée de réverb selon la fréquence. Raccourcissez le decay sous 200 Hz pour éviter le boom, atténuez le decay autour de 5 kHz si les sifflantes deviennent gênantes, et allongez-le au-delà de 8 kHz pour un peu d’air.
+      </li>
+      <li>
+        <b>Mix et Post-EQ :</b> En send, laissez le mix à 100% wet. Si utilisé en insert, dosez entre 5–20% selon l’effet voulu. Le Post EQ permet de sculpter uniquement la queue de réverb (par exemple, couper au-dessus de 10 kHz si elle apporte du souffle).
+      </li>
+      <li>
+        <b>Intégration dans le mix rap :</b> Sur les couplets rapides, évitez les longues réverbs type Hall. Préférez une reverb discrète avec peu de decay et ajustez le pre-delay (30 à 80 ms) pour préserver l’intelligibilité.
+      </li>
+    </ul>
+    <p>
+      <b>En résumé :</b> Pro-R donne du volume et de la profondeur à la voix sans la noyer. La subtilité est clé : la meilleure réverb se ressent plus qu’elle ne s’entend.
+    </p>
+
+    <!-- Saturn 2 -->
+    <h3 class="text-lg font-semibold text-indigo-600 mb-1">🔥 FabFilter Saturn 2 – Saturation & Distorsion multibande</h3>
+    <ul class="list-disc list-inside space-y-1 mb-3">
+      <li>
+        <b>Saturation douce pour “coller” la voix :</b> En mode Tape, Tube ou Warm Tape, Saturn 2 peut émuler une bande ou un préampli à lampes. À faible dose (Drive très bas, ~0 à 2 dB dans le rouge), cela enrichit la voix et la rend plus présente. Par exemple, un “Clean Tape” sur une bande couvrant 200 Hz – 4 kHz, Drive à 10%, Mix à 50% : un grain discret qui aide la voix à percer sans monter le volume.
+      </li>
+      <li>
+        <b>Excitation multibande :</b> Créez 2 ou 3 bandes et saturez différemment les graves, médiums, aigus. Par exemple, saturez légèrement les aigus (&gt; 5 kHz) en mode Warm Tube pour simuler un exciter, et les bas-médiums (200–500 Hz) en mode Tape pour donner de la chaleur, tout en gardant les basses &lt;100 Hz et ultra aigus &gt;12 kHz propres.
+      </li>
+      <li>
+        <b>Distorsion créative sur ad-libs :</b> Sur des voix secondaires, Saturn 2 offre des modes très agressifs (Amp, Fuzz, Broken). Dupliquez une ligne de voix, saturez-la à fond puis mixez-la en arrière-plan (20% du niveau de la voix propre) : idéal pour accentuer un mot ou un cri dans un couplet ou refrain.
+      </li>
+      <li>
+        <b>Modulation & Dynamic Drive :</b> Saturn 2 permet de moduler le drive selon l’enveloppe ou un LFO (ex : saturation pulsée en rythme). Pour la voix lead, restez subtil, mais pour les effets, osez plus !
+      </li>
+    </ul>
+    <div class="bg-indigo-50 rounded-xl p-4 text-sm mb-2">
+      <b>Conseils :</b> La saturation est parfaite pour rendre une voix plus présente sans en augmenter le volume. Dosez avec parcimonie sur la voix lead : la différence doit être ressentie comme un enrichissement, pas une distorsion évidente. Utilisez le mix dry/wet pour doser, et compensez le gain pour ne pas fausser votre jugement (Saturn propose l’auto-gain).
+    </div>
+
+    <!-- Autres plugins FabFilter -->
+    <h3 class="text-lg font-semibold text-indigo-600 mb-1">🔧 Autres plugins FabFilter utiles</h3>
+    <ul class="list-disc list-inside space-y-1 mb-3">
+      <li>
+        <b>Pro-DS (de-esseur) :</b> Excellent pour cibler les sifflantes en toute transparence. Mode Allround ou Female selon la voix. Très efficace pour dompter les “S” sans abîmer le timbre.
+      </li>
+      <li>
+        <b>Pro-G (gate/expander) :</b> Utile pour couper le micro entre les phrases, éliminer un bruit de fond, ou obtenir un silence propre entre les lignes. À utiliser si la prise n’est pas parfaitement propre.
+      </li>
+      <li>
+        <b>Pro-L 2 (limiteur) :</b> Peu utilisé sur une voix isolée, sauf pour limiter quelques pics après compression. Sur le bus mastering, Pro-L 2 est un brickwall transparent, parfait pour finaliser un mix ou un bus voix.
+      </li>
+    </ul>
+
+    <div class="bg-indigo-100 rounded-xl p-4 text-sm mb-2">
+      <b>En résumé :</b> La suite FabFilter excelle pour un traitement chirurgical, moderne et transparent. Pro-Q 3 sculpte parfaitement le spectre vocal, Pro-C 2 contrôle la dynamique avec finesse, Pro-R offre un espace maîtrisé, Saturn 2 apporte la densité harmonique. Ce sont des outils plébiscités par les pros pour obtenir des résultats propres et cohérents, et ils se combinent très bien avec des plugins plus “colorés” comme ceux de Waves.
+    </div>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm">
+      <b>Workflow courant :</b> Nettoyez avec FabFilter (EQ, compresseur), puis ajoutez une touche de couleur avec un EQ ou compresseur analogique Waves en fin de chaîne pour le "mojo".
+    </div>
+  </div>
+</section>

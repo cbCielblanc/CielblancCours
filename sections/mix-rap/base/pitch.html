@@ -1,0 +1,65 @@
+<section id="pitch" class="bg-white rounded-2xl shadow-md p-8">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-2">Correction de la hauteur : Autotune et ajustement du pitch</h2>
+      <p class="mb-4 text-gray-700">
+        La justesse de la voix est un aspect essentiel, même en rap où le chant pur est moins fréquent. De nombreux rappeurs utilisent aujourd’hui des effets de pitch correction de façon plus ou moins prononcée : du réglage transparent pour corriger quelques notes chantonnées, jusqu’à l’effet Autotune poussé à l’extrême devenu une signature dans le trap et le cloud rap. Voici comment utiliser les outils de correction de hauteur principaux.
+      </p>
+
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Autotune (Antares Auto-Tune et équivalents temps réel)</h3>
+        <p class="text-gray-700 mb-2">
+          “Auto-Tune” est le standard de correction de hauteur automatique et instantanée. Le plugin Antares Auto-Tune reste la référence, mais il existe des alternatives chez Waves, iZotope (Nectar), ou en plugins gratuits. Le principe : la hauteur de la voix est détectée et forcée vers la note la plus proche d’une gamme prédéfinie, ce qui corrige les fausses notes et permet l’effet “robotique” célèbre si on exagère les réglages.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li><b>Tonalité / Gamme (Key/Scale) :</b> Indiquez toujours la tonalité exacte du morceau pour éviter les erreurs de correction.</li>
+          <li><b>Retune Speed :</b> Plus la valeur est basse (0-5 ms), plus l’effet auto-tune sera marqué. Pour un rendu naturel, tournez autour de 20–50 ms.</li>
+          <li><b>Humanize :</b> Permet de préserver un peu de naturel sur les notes longues (mettez faible pour du rap typé trap, plus haut pour du chant/vibrato).</li>
+          <li><b>Formant Shifting :</b> À activer en “preserve” pour garder un timbre réaliste, ou à manipuler pour des effets spéciaux.</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800 mb-2">
+          <b>Conseil :</b> Pour du rap autotuné moderne, choisissez la gamme, une Retune Speed très rapide (0–5 ms), Humanize faible. Pour un rendu plus doux ou chantonné, utilisez une Retune Speed plus lente (20–40 ms) et augmentez Humanize.<br>
+          Automatisez si besoin ces paramètres selon le passage.
+        </div>
+        <div class="bg-gray-100 rounded-xl p-4 text-sm mb-2">
+          <b>Dans FL Studio :</b> Utilisez Antares Autotune en VST (piste vocale du Mixer), Pitcher pour un autotune simple ou NewTone pour édition manuelle. Placez-le en début de chaîne (après EQ, de-esser, avant compresseur).<br>
+          <b>Dans Reaper :</b> Insérez Auto-Tune en début de chaîne. ReaTune (JS) permet une correction simple. Utilisez le mode low-latency si vous enregistrez avec monitoring en temps réel.
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Nectar d’iZotope et correction auto intégrée</h3>
+        <p class="text-gray-700 mb-2">
+          Nectar (iZotope) propose une suite vocale tout-en-un, incluant un module de Pitch Correction fonctionnant comme Autotune (tonalité, vitesse, intensité). Pratique : le Vocal Assistant détecte la tonalité et ajuste la correction, puis enchaîne automatiquement de-esser, compression, etc.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li>Idéal pour workflow rapide, ou si vous utilisez déjà Nectar sur la voix.</li>
+          <li>Le module Pitch Correction est parfait pour une correction propre et naturelle (moins typée qu’un Autotune très rapide).</li>
+          <li>Possède un mode graphique (manuel) via l’intégration avec Melodyne.</li>
+          <li>Crée aussi des harmonies, backups, et gère le volume automatiquement (Auto-Level).</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800">
+          Pour un effet “signature” très marqué, Autotune Antares reste plus flexible. Mais Nectar est très efficace pour l’essentiel du pitch correction, surtout en contexte de workflow rapide ou de presets automatiques.
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Édition manuelle avec Melodyne</h3>
+        <p class="text-gray-700 mb-2">
+          Melodyne est le standard pour l’édition manuelle ultra-précise : visualisez la voix sous forme de notes (“blobs”), corrigez la justesse, le timing, le vibrato, et même le formant, note par note. C’est la solution la plus naturelle pour corriger quelques erreurs ou créer des harmonies personnalisées.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li>Corrigez seulement les notes qui en ont besoin, sans dénaturer la voix.</li>
+          <li>Idéal pour créer des harmonies, adoucir un vibrato, ou aligner parfaitement la justesse.</li>
+          <li>Disponible dans FL Studio (NewTone en version simple, ou intégration Melodyne externe) et Reaper (ARA).</li>
+          <li>Nécessite un traitement hors temps réel (édition, puis relecture).</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800">
+          <b>À retenir :</b> Utilisez Melodyne pour les corrections chirurgicales ou pour générer des doublages/harmonies précis. Pour le rap moderne, combinez souvent Autotune (pour le style) et Melodyne (pour la finesse sur certains passages).
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <p class="text-gray-700">
+          <b>Conclusion :</b> La correction de pitch en rap peut être totalement transparente (on ne l’entend pas) ou ultra-créative (effet autotune marqué). Choisissez l’outil adapté au style : Auto-Tune pour l’effet signature, Nectar pour la rapidité, Melodyne pour la précision ultime.
+        </p>
+      </div>
+    </section>

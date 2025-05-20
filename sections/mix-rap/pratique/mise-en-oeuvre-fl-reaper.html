@@ -1,0 +1,71 @@
+<section id="mise-en-oeuvre-fl-reaper" class="bg-white rounded-2xl shadow-md p-8">
+        <h2 class="text-2xl font-semibold text-indigo-700 mb-2">
+            Mise en œuvre dans FL Studio & Reaper : Routing, niveaux et automation
+        </h2>
+        <p class="mb-4 text-gray-700">
+            Après avoir passé en revue les traitements du mix vocal, voyons comment structurer et automatiser votre session dans deux DAW phares : <b>FL Studio</b> et <b>Reaper</b>. Chaque logiciel a ses particularités : voici comment organiser, router, gérer les niveaux et l’automation de façon professionnelle.
+        </p>
+
+        <!-- FL STUDIO -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-1">Workflow dans FL Studio</h3>
+            <ul class="list-disc list-inside text-gray-600 mb-3">
+            <li>
+                <b>Routing & Bus :</b> Chaque Channel est assigné à un Insert du Mixer. Pour un bus voix, routez vos pistes Lead, Back, Adlibs vers un Insert “VOX Bus” via <i>Route to this track only</i>. Les Send (reverb, delay) sont gérés par les flèches et boutons d’envoi sur chaque Insert.
+            </li>
+            <li>
+                <b>Effets en Send :</b> Placez vos reverbs/delays en 100% wet sur une piste dédiée ; envoyez-y la voix via le bouton Send. Pour que la reverb suive le niveau de la voix, vérifiez que l’envoi est en “Post Fader”.
+            </li>
+            <li>
+                <b>Compression parallèle / routing avancé :</b> Routez la voix à la fois vers le Master (dry) ET vers un bus de compression parallèle. Utilisez <b>Patcher</b> pour chaîner des effets complexes ou créer vos propres chaînes “tout-en-un”.
+            </li>
+            <li>
+                <b>Sidechain :</b> Pour sidechainer (par ex. compresser la musique par la voix), utilisez <i>Sidechain to this track</i> sur la flèche, puis sélectionnez la source Sidechain dans le compresseur (Fruity Limiter en mode Comp).
+            </li>
+            <li>
+                <b>Gain staging :</b> Ajustez le niveau en amont via le “Channel Volume” (clip audio), pour viser -6 dB peak avant entrée dans le mixer. Gardez de la marge sur le Master (-6 dB peak), surtout avant mastering. Si besoin, insérez <b>Fruity Balance</b> comme trim de gain sur chaque piste.
+            </li>
+            <li>
+                <b>Automation :</b> Utilisez <b>Automation Clips</b> dans la Playlist (clic droit sur n’importe quel paramètre &gt; Create automation clip). Automatisez le volume, l’envoi delay/reverb (delay throw), le mix d’un effet, etc. Pour un “vocal ride” précis, combinez l’automation volume et le “clip gain” en tirant le petit handle sur chaque audio clip.
+            </li>
+            <li>
+                <b>Organisation :</b> Nommez et colorez vos pistes (ex : voix en bleu), regroupez par type, et consolidez vos prises vocales en audio clips pour simplifier l’édition.
+            </li>
+            </ul>
+            <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800 mb-2">
+            <b>Tips :</b> FL excelle pour les automations modulantes et effets créatifs. Utilisez l’automation du bouton Send pour créer des delay throws précis sur un mot. Essayez Patcher pour des chaînes vocales avancées !
+            </div>
+        </div>
+
+        <!-- REAPER -->
+        <div>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-1">Workflow dans Reaper</h3>
+            <ul class="list-disc list-inside text-gray-600 mb-3">
+            <li>
+                <b>Organisation :</b> Toutes les pistes peuvent servir d’audio, bus, send… Placez vos voix lead, backs, adlibs sur des tracks distincts. Groupez-les dans un dossier “VOX BUS” (track parent), insérez-y les traitements globaux.
+            </li>
+            <li>
+                <b>Effets send (reverb, delay) :</b> Créez une nouvelle track “Reverb Vox”, insérez la reverb en insert (wet only). Sur chaque voix ou le bus, faites un <i>Send</i> vers cette piste. Réglez niveau/panorama du send.
+            </li>
+            <li>
+                <b>Sidechain & routing avancé :</b> Reaper gère le sidechain par canaux (jusqu’à 64 canaux par track !). Pour ducker la reverb ou faire un dynamic EQ sidechain, envoyez la voix sur canaux 3/4 et configurez le compresseur ou l’EQ pour réagir à cet input.
+            </li>
+            <li>
+                <b>Gain staging :</b> Item Volume (handle sur clip audio) pour ajuster chaque phrase. Enregistrez vers -18 dB RMS, peaks vers -10 à -6 dBFS. Trim possible avec JS Volume Adjustment ou VU Meter. Laissez -1 dBFS sur le Master.
+            </li>
+            <li>
+                <b>Automation & édition :</b> Toutes les automations (volume, pan, FX, send…) sont visibles sur des lanes sous la piste. Pour un “vocal ride”, utilisez Volume (Pre-FX) ou l’enveloppe Take Volume sur l’item audio. Coupez/faites glisser (Slip Edit) ou fondez les items pour une édition fine. Automation de send idéale pour delay throw sur un mot.
+            </li>
+            <li>
+                <b>Fonctions avancées :</b> Geler/“imprimer” les traitements lourds (Apply FX as new take), utiliser SWS/Scripts (auto-clip gain, Vocal Rider…). Utilisez le mono check sur le Master pour vérifier la compatibilité.
+            </li>
+            </ul>
+            <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800 mb-2">
+            <b>Tips :</b> Reaper permet une souplesse extrême pour organiser, router, et automatiser. Profitez des dossiers, de la Routing Matrix, des scripts et de la fluidité du DAW pour peaufiner chaque détail de votre mix vocal.
+            </div>
+        </div>
+
+        <p class="text-gray-700 mt-6">
+            <b>À retenir :</b> Quel que soit votre DAW, une bonne organisation (bus, sends, niveaux) et l’usage judicieux de l’automation font la différence entre un mix vocal amateur et un mix pro ! Prenez le temps de peaufiner vos gains, vos envois, et vos effets pour un résultat vraiment pro.
+        </p>
+    </section>

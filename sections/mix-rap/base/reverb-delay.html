@@ -1,0 +1,68 @@
+<section id="reverb-delay" class="bg-white rounded-2xl shadow-md p-8">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-2">Réverbération et delay : créer l’espace autour de la voix</h2>
+      <p class="mb-4 text-gray-700">
+        Après avoir sculpté la voix elle-même, il faut l’intégrer dans un espace pour qu’elle ne sonne pas collée à la bouche de l’auditeur. La réverbération et le delay sont les effets clés pour donner de la profondeur, du relief et de l’ambiance à la voix rap. Ils simulent l’écho d’une pièce réelle ou imaginaire et contribuent énormément à la couleur émotionnelle du morceau.
+      </p>
+
+      <!-- IMAGE VALHALLA -->
+      <div class="flex flex-col items-center mb-6">
+        <img src="./72017ff8-486c-4c9b-80ec-2ee46580b881.png" alt="Valhalla VintageVerb plugin" class="rounded-xl shadow-md border mb-2 max-h-72 object-contain">
+        <span class="text-xs text-gray-500">
+          Interface du plugin Valhalla VintageVerb (mode 1980s) – un classique pour la reverb vocale moderne.
+        </span>
+      </div>
+
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">La réverbération (reverb)</h3>
+        <p class="text-gray-700 mb-2">
+          La réverb simule la persistance du son dans un environnement. Elle sert à placer la voix dans un espace cohérent avec la prod, donner du liant, ou dramatiser certains passages. Le dosage va du très sec (boom-bap classique) au très “wet” (cloud rap atmosphérique).
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li><b>Types :</b> Algorithmiques (ValhallaVintageVerb, Lexicon, Pro-R…), à convolution (impulsions de vraies salles). Les algorithmiques sont souvent préférées pour le rap moderne pour leurs couleurs stylisées.</li>
+          <li><b>Technique d’envoi :</b> Placez la reverb sur un bus/auxiliaire dédié (100% wet), envoyez la voix dedans, contrôlez le volume avec le send. Permet de doser indépendamment la voix sèche/humide.</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800 mb-2">
+          <b>Réglages clés pour la voix rap :</b><br>
+          <b>Pre-delay :</b> 50–100 ms, pour que la reverb démarre après la voix (clarité).<br>
+          <b>Decay :</b> Court (0.5–1.5s) pour du rap sec, long (3–4s) pour des refrains chantés ou ambiance.<br>
+          <b>EQ sur la reverb :</b> Coupez les basses (< 300 Hz) et, si besoin, atténuez les aigus (> 6–8 kHz) pour éviter de “flouter” ou de ramener des sibilances.
+        </div>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li><b>Taille/type :</b> Room courte pour épaissir discrètement ; Hall/Plate pour du chant enveloppant.</li>
+          <li><b>Ducking (avancé) :</b> Compressez la reverb en sidechain par la voix, pour qu’elle baisse quand la voix entre, et remonte sur les fins de phrases (effet “clean mais ambient”).</li>
+          <li><b>Astuces créatives :</b> Automatisez le send ou mix de la reverb (ex : monter la reverb sur la fin d’un couplet), combinez plusieurs types (short room + long hall pour “layer”).</li>
+        </ul>
+        <div class="bg-gray-100 rounded-xl p-4 text-sm mb-2">
+          <b>Dans FL Studio :</b> Piste Send ou insert dédié, plugin reverb à 100% wet, ajustez le send depuis la piste vocale.<br>
+          <b>Dans Reaper :</b> Track “Verb” en wet, envoyez la voix, montez le level à l’envie.
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Le delay (écho)</h3>
+        <p class="text-gray-700 mb-2">
+          Le delay répète la voix à intervalles réguliers. Dans le rap, il structure l’espace sans masquer la voix, et sert à rythmer ou souligner certaines fins de phrases (“delay throw”). Il est aussi efficace que la reverb pour donner de la profondeur et du mouvement à la voix.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li><b>Types :</b> Simple, slapback court, delay rythmique synchronisé (croche, noire…), ping-pong L/R, tape delay analogique (ex. Waves H-Delay, Valhalla Delay), filtered delay.</li>
+          <li><b>En send :</b> Comme la reverb, mettez le delay sur un bus dédié 100% wet, envoyez la voix dedans et dosez à la demande.</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800 mb-2">
+          <b>Réglages classiques :</b><br>
+          - Slap delay : 80–150 ms, une seule répétition, très faible volume, pour élargir discrètement.<br>
+          - Delay en croches (1/4) ping-pong, feedback modéré (2–3 échos), souvent filtré (lowpass 3–4 kHz), classique pour “bouncer” la fin des lignes.<br>
+          - Delay throw : automatisez l’envoi delay pour ne répéter que certains mots (préparez une piste “Delay Throw” ou automate le send sur un mot précis).
+        </div>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li>Synchronisez toujours le delay au tempo du morceau (BPM Sync) !</li>
+          <li>Appliquez EQ/filtre et, si besoin, des modulations (chorus, flanger) sur le bus delay pour le texturer.</li>
+        </ul>
+        <div class="bg-gray-100 rounded-xl p-4 text-sm mb-2">
+          <b>Dans FL Studio :</b> Fruity Delay 3 sur une piste dédiée, routez la voix dedans (wet only), filtrez si besoin.<br>
+          <b>Dans Reaper :</b> Track send, plugin delay en 100% wet, automation du volume pour créer des throws ponctuels.
+        </div>
+        <p class="text-gray-700 mt-4">
+          <b>À retenir :</b> La reverb lie et adoucit la voix, le delay ajoute du rythme et de la largeur. Combinez-les pour un espace vocal pro : une room courte pour “coller” la voix, plus un delay pour les fins de phrases. Adaptez selon le style voulu !
+        </p>
+      </div>
+    </section>

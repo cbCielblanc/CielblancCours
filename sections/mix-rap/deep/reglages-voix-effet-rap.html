@@ -1,0 +1,294 @@
+<section id="reglages-voix-effet-rap" class="bg-white rounded-2xl shadow-md p-8">
+  <h2 class="text-2xl font-semibold text-indigo-700 mb-4">
+    Réglages recommandés selon le type de voix/effet recherché
+  </h2>
+  <p class="mb-4 text-gray-700">
+    Chaque voix et chaque style de rap peut nécessiter des ajustements spécifiques. Voici quelques
+    recommandations de réglages (plugins et paramètres) pour différents types de voix ou d’effets
+    couramment rencontrés en production rap. Bien sûr, ce sont des points de départ à affiner selon la
+    situation.
+  </p>
+  
+  <h3 class="text-xl font-semibold text-indigo-600 mb-3">Voix rap agressive / énergique (trap énervé, voix haute en décibels)</h3>
+  <div class="mb-4 text-gray-700">
+    Une voix agressive est souvent projetée fort, presque criée ou avec beaucoup d’attaque. Objectifs :
+    dompter la dynamique tout en conservant l’énergie, éviter la dureté excessive, garder la voix bien
+    frontale.
+  </div>
+  <div class="mb-4">
+    <b>Chaîne & réglages conseillés :</b>
+    <ul class="list-disc list-inside ml-4">
+      <li>
+        <b>Auto-Tune :</b> Si c’est chanté (ex: rage rap autotuné), Retune Speed
+        assez rapide (~5-10) pour garder un certain effet, mais pas forcément 0 car on veut peut-être éviter trop
+        de yodel si c’est rap hardcore (à ajuster au cas par cas). Key bien calée.
+      </li>
+      <li>
+        <b>EQ soustractif :</b> High-pass vers 80 Hz. Rechercher un éventuel excès vers 2–4 kHz (ces voix peuvent être très criardes dans cette zone)
+        – si l’oreille saigne, atténuer ~3 kHz de 2-3 dB avec Q moyen. Parfois un creux à 500 Hz aide si le micro a
+        donné du “boxy”.
+      </li>
+      <li>
+        <b>Compression :</b> Assez franche. Par ex., 1176 (Waves CLA-76) en premier, attaque ultra
+        rapide, release rapide, ratio 4:1 ou 8:1. Viser ~5 dB de GR sur les pics (il va cliper les transitoires
+        agressives). Ensuite LA-2A (Waves CLA-2A) ou RComp opto pour tasser encore 3-4 dB, plus lentement.
+        L’utilisation du Waves RVox est aussi populaire sur ces voix : son gate intégré supprime le souffle et il
+        compresse fort – un réglage à -5 dB de threshold peut suffire (attention, ça écrase beaucoup, à goûter).
+        Au total, n’ayez pas peur d’une réduction globale de 6–10 dB cumulée si la voix le nécessite – une voix
+        hurlée a une dynamique folle, on doit la calmer pour le mix.
+      </li>
+      <li>
+        <b>De-esser :</b> Oui, absolument, souvent vers 7–8 kHz. Ces rappeurs articulent fort les “S” et “T”. Un de-esser (ou même deux en cascade à
+        intensité modérée) pour enlever la nature sifflante sans enlever l’agressivité du flow.
+      </li>
+      <li>
+        <b>Saturation :</b> Tape saturation (Saturn 2 en mode Tape, drive 10-20%). Ça va arrondir un peu le son, donner du warmth aux
+        cris, éviter la froideur numérique. On peut saturer en // ou sur la piste. Éviter la distorsion trop audible
+        qui rendrait la voix rugueuse (sauf si c’est du rap rock et qu’on veut saturer genre Linkin Park style).
+      </li>
+      <li>
+        <b>EQ additif :</b> Après compression, écoutez : si la voix a perdu un peu de clarté, un petit boost 5 kHz (+2 dB)
+        peut redonner du mordant intelligible. Un shelf à 10 kHz (+2 dB) pour l’air si la saturation ou de-ess a
+        trop émoussé. En bas, si la voix manque de corps face à l’instru musclé, un boost vers 120–200 Hz (+1
+        ou 2 dB) peut aider à solidifier la voix (attention aux pops toutefois).
+      </li>
+      <li>
+        <b>Reverb/Delay :</b> Pour une voix
+        agressive, souvent on la garde assez sèche pour conserver la proximité et l’impact. Préférer un delay
+        court (slap delay 1/16) ou mi-long (1/4) en rythme, feedback bas, qui double un peu la voix sans la
+        flouter. Reverb très courte (room &lt; 1s) ou plate légère pour l’intégration, mais pas de grand hall qui la
+        recule. On peut aussi utiliser un micro-doublage léger (2ème piste de voix enregistrée) pour épaissir
+        sur certains mots clés – si pas possible, un doubler plugin très subtil.
+      </li>
+      <li>
+        <b>Autres :</b> Utiliser un Transient
+        Shaper (comme Neutron) pour contrôler si la voix tape trop au début de chaque phrase – on peut
+        réduire légèrement les transitoires si besoin, ce qui adoucit l’attaque sans baisser le reste. Mais
+        généralement la compression a déjà géré.
+      </li>
+    </ul>
+    <div class="mt-2 text-gray-700">
+      En somme, pour une voix agressive : contrôlez la bête (comp, de-ess), arrondissez les angles (sat, EQ
+      doux sur les cris), mais laissez-lui son caractère mordant (un peu de haute fréquence doit rester pour le
+      “tranchant”). Évitez l’erreur de trop adoucir au point de la rendre plate – il faut conserver l’impression
+      d’énergie brute.
+    </div>
+  </div>
+
+  <h3 class="text-xl font-semibold text-indigo-600 mb-3">Voix rap douce / posée (rap calme, voix grave ou feutrée, ou rap chanté R&amp;B)</h3>
+  <div class="mb-4 text-gray-700">
+    Ici on a une voix plus détendue, parfois chuchotée ou simplement sans crier. Objectifs : augmenter la
+    clarté sans casser la douceur, donner du chaleureux, envelopper la voix dans une ambiance adaptée.
+  </div>
+  <div class="mb-4">
+    <b>Chaîne & réglages conseillés :</b>
+    <ul class="list-disc list-inside ml-4">
+      <li>
+        <b>Auto-Tune :</b> Si c’est du rap très mélodique type R&amp;B, retune modéré
+        (10-20) ou plus lent pour que ça reste naturel, sauf si on veut quand même l’effet autotune stylé.
+        Souvent sur voix douces, on mise sur le naturel, donc Auto-Tune peut être présent mais on cache son
+        effet (Retune Speed 20+, Humanize 50).
+      </li>
+      <li>
+        <b>EQ soustractif :</b> High-pass un peu plus haut parfois (p.ex 100
+        Hz) pour éliminer proximity effect, sauf si la voix est très fine – s’il y a du corps utile on le garde. Cette
+        voix étant pas criarde, on trouve moins de choses très déplaisantes, mais peut-être un excès de basses
+        (voix masculine douce peut avoir trop de &lt;100 Hz) – coupez là. Si un buildup dans bas-médiums (200–
+        300 Hz) rend la voix boueuse, réduire 2-3 dB. Si elle est enregistrée de près, peut y avoir une bosse vers 1
+        kHz qui la rend boxy – checkez et éventuellement atténuer un peu.
+      </li>
+      <li>
+        <b>Compression :</b> Une compression
+        plus légère qu’une voix agressive, mais tout de même nécessaire car souvent ces voix ont plus de
+        dynamique (qui dit doux dit souvent variations). Un compresseur opto/varimu convient bien – par ex.
+        Tube-Tech CL1B (ou UAD LA-2A Silver, ou Pro-C2 en mode Opto). Ratio 2:1 ou 3:1, attaque moyenne-
+        lente (20 ms) pour ne pas tuer les micro-dynamiques, release auto ou 150 ms. On vise 3–5 dB de
+        réduction sur les pics. On peut aussi utiliser un Vocal Rider (Waves) en amont ou aval, qui
+        automatiquement monte/baisse la voix pour la garder constante – c’est très utile sur voix posées où un
+        compresseur seul peut soit en faire trop soit pas assez, le rider comblera les creux sans impacter le
+        timbre. Un second compresseur peut être mis en fin (par ex un Vari-Mu style Fairchild 670 émulé, pour
+        “coller” le tout avec 1-2 dB de réduction très smooth).
+      </li>
+      <li>
+        <b>De-esser :</b> Oui si nécessaire, mais les voix douces
+        sont souvent moins sibilantes (car moins d’énergie dans les “S”). Donc paramétrez-le mais threshold
+        plutôt haut, il n’interviendra que si vraiment ça siffle. Fréquence ~5-6 kHz pour voix féminine douce, ~7
+        kHz pour voix masculine grave (car les sifflantes descendent un peu plus bas dans les graves).
+      </li>
+      <li>
+        <b>Saturation :</b> Oui, très utile ! Une voix douce profite d’une saturation harmonique pour gagner en
+        richesse. Un tape saturator type Softube Tape, ou Saturn 2 en mode “Warm Tape” sur tout le spectre,
+        drive modéré, peut apporter ce qu’on appelle de la cohésion et du “collant analogique”. Vous pouvez
+        aussi tester un Exciter bande haute pour rajouter de l’air si la voix est un peu terne (ex: Nectar exciter,
+        mode Retro, 8 kHz+). Et/ou du tube dans le médium pour chaleur. L’idée est de compenser le fait qu’une
+        voix douce peut parfois se perdre dans un mix trap surchargé – la saturation la fera ressortir sans la
+        rendre forte.
+      </li>
+      <li>
+        <b>EQ additif :</b> Souvent, booster le haut du spectre. Par ex., +4 dB shelf à 10 kHz pour
+        ajouter de l’air scintillant (ces voix murmurées manquent parfois de brillance). Un petit boost à 3 kHz
+        (+2 dB) aide l’intelligibilité des paroles, comme la voix n’est pas projetée fort, il faut qu’on comprenne.
+        On peut aussi accentuer un peu le bas-médium chaleureux s’il manque : +2 dB vers 200 Hz pour
+        donner du corps (attention aux retours de salle, s’il y a du room noise, ça va booster aussi). Un bon outil
+        pour ça est un EQ vintage type Pultec : boost broad à 100 Hz (pour épaisseur) couplé à une atténuation
+        de 100 Hz pour pas que ce soit boueux – fameux trick Pultec, ou boost d’un côté atténuer de l’autre, qui
+        donne un low-end rond sans surplus.
+      </li>
+      <li>
+        <b>Reverb/Delay :</b> Sur une voix posée, on peut se permettre plus
+        de reverb car il y a de l’espace entre les mots souvent, et l’ambiance compte. Par exemple, une jolie
+        plate réverb 1,5s qui enveloppe la voix peut très bien marcher pour un rap mélancolique. Utilisez un
+        prédélai d’environ 30 ms pour ne pas noyer l’attaque des mots. Damping pour ne pas trop d’aigus dans
+        la réverb (on veut qu’elle soit feutrée aussi). Combinez avec un delay tempo, type 1/4 note, un peu filtré
+        (lo-fi delay) pour remplir les fins de phrase. On peut même ajouter un chorus subtil sur la reverb ou en
+        insert très léger pour un effet R&amp;B (ça épaissit la voix de manière onirique).
+      </li>
+      <li>
+        <b>Stereo Doubling/Harmony :</b> Si c’est chanté, créer des harmonies en backing vocals (ou via Nectar Harmony) peut
+        sublimer une voix douce. Par ex., doubler l’octave au dessus en ghost derrière, ou une tierce sur
+        certaines fins de phrases. Il faut les mixer bas, mais ça enrichit l’harmonie. Pensez à les traiter aussi
+        (auto-tune, eq, comp) mais souvent on les laisse un peu plus filtrées/douces que la lead pour ne pas
+        voler la vedette.
+      </li>
+      <li>
+        <b>Autres :</b> Appliquer une automation de volume tout du long pour bien gérer chaque
+        mot dans le mix. Les voix posées ont parfois des fins de phrase quasi chuchotées qu’on veut quand
+        même entendre – un léger boost de volume manuel là où le compresseur n’a pas su tout relever, c’est ce
+        qui fait la différence entre un mix pro et moyen. On peut aussi automatiquer la reverb send : plus de
+        reverb sur un mot qui conclut un couplet, pour plus d’émotion, puis reverb plus discrète sur le reste.
+      </li>
+    </ul>
+    <div class="mt-2 text-gray-700">
+      En bref, pour une voix douce : amplifiez les détails (air, nuances) et enrobez la d’effets chaleureux (reverb,
+      sat) pour qu’elle sonne pleine et présente malgré son volume moindre. Évitez l’erreur de trop
+      compresser ou trop equaliser au point de la durcir – on veut conserver le velouté, donc chaque
+      traitement doit être musical et transparent.
+    </div>
+  </div>
+
+  <h3 class="text-xl font-semibold text-indigo-600 mb-3">Voix autotunée à fond (effet trap chanté, type Lil Uzi Vert, Travis Scott)</h3>
+  <div class="mb-4 text-gray-700">
+    Ici l’effet recherché est clairement le son Auto-Tune assumé, presque un instrument électronique.
+    Objectifs : obtenir le glissement robotique entre les notes, combiner avec effets pour créer une
+    ambiance moderne (reverb planante, etc.), tout en gardant la voix intelligible et percutante en rythme.
+  </div>
+  <div class="mb-4">
+    <b>Chaîne & réglages conseillés :</b>
+    <ul class="list-disc list-inside ml-4">
+      <li>
+        <b>Auto-Tune :</b> Évidemment, Retune Speed 0 ou proche de 0, Humanize
+        faible (0–10) car on veut le côté robot sur les notes tenues aussi (parfois on en met un peu si la note
+        longue sonne trop artificielle, mais l’idée c’est qu’on entende le traitement). Key/Scale correct. Si dispo,
+        mode “Classic” d’Auto-Tune (pour un son un peu comme les anciennes versions). Possiblement jouer
+        avec Formant : par ex, Travis Scott utilise parfois l’Auto-Tune combiné à un pitch shifting de formant
+        pour donner une couleur slightly différente (il utilise aussi beaucoup le Doubling). Donc, si votre Auto-
+        Tune propose un paramètre “Alto/Ténor” vs “Low Male”, testez ce qui sonne le mieux. Une astuce :
+        mettre Auto-Tune sur chaque doublage de voix de la même façon, mais on peut tester d’avoir un
+        doublage avec la gamme différente (genre la tierce majeure au lieu de mineure sur un ad-lib), ça crée
+        des dissonances intéressantes – mais ça c’est très expérimental, à ne faire que sciemment.
+      </li>
+      <li>
+        <b>EQ & Traitements standards :</b> Même processus qu’une voix chantée : high-pass, compressions, de-ess.
+        L’Auto-Tune extrême peut introduire des artefacts un peu métalliques dans les médiums, prêtez
+        attention vers 800 Hz – si la voix sonne trop canard ou nasillard, une petite réduction là pourrait aider.
+        De même, l’effet autotune peut accentuer un vibrato synthétique, parfois un de-esser un peu plus large
+        (genre qui prend 4–10 kHz) peut aussi adoucir le côté “metallique”. Mais globalement, traitez la voix
+        comme une voix chantée classique, sinon.
+      </li>
+      <li>
+        <b>Effets de modulation / harmonies :</b> C’est courant d’empiler
+        des effets sur ces voix autotunées : doublage stéréo, pitch shift add harmonies. Un plugin prisé est
+        Antares Harmony Engine ou à défaut Nectar Harmony. Par ex, sur un refrain, créer deux harmos : une
+        à la tierce au-dessus, une à l’octave en dessous, mixées très bas, ça donne un halo très harmonique
+        derrière la voix. Travis Scott, Migos, etc., enregistrent souvent plusieurs passes eux-mêmes (dont une
+        en voix grave, une en voix aiguë en backing), mais si on n’a pas ça, on peut simuler avec des
+        harmonizers.
+      </li>
+      <li>
+        <b>Reverb & Delay modernes :</b> Souvent, on va mettre une grosse reverb très dark sur la
+        voix autotune pour un effet planant. Ex : VintageVerb en mode Hall, decay 3 s, mais High Cut à 5 kHz,
+        Mix pas trop fort. Ainsi la traîne est longue mais feutrée, ce qui remplit l’espace sans trop concurrencer
+        la voix direct. Coupler ça avec un 1/4 delay ping-pong bien audible (on l’entend distinctement
+        répondre). On peut aussi utiliser un autopan sur le delay pour qu’il se balade. Ce design d’effet crée un
+        univers autour de la voix autotunée qui la transforme en instrument.
+      </li>
+      <li>
+        <b>Distorsion créative :</b> Parfois,
+        une distorsion légère sur la voix autotunée peut ajouter du caractère (ex: un petit Decapitator à -10 dB
+        mix, ou Saturn saturant les aigus). Ça introduit des harmoniques qui peuvent aider la voix à coller au
+        reste si l’instru est très saturé (guitares etc.). À ne pas confondre avec saturer pour compenser un
+        défaut – là c’est plus par choix esthétique (typiquement sur du hyperpop/trap, on peut saturer à la
+        Caroline Polachek ou 100 gecs, mais c’est déjà un autre style).
+      </li>
+      <li>
+        <b>Sidechain sur reverb/delay :</b> À
+        envisager : pour conserver la clarté rythmique, mettre un compresseur sidechain sur la reverb et delay
+        (trigger = voix dry) qui abaisse l’effet quand la voix chante, et relâche quand elle s’arrête. Ainsi la voix
+        autotune reste très intelligible, et le “nuage” de reverb apparaît seulement en fin de phrase. C’est très
+        efficace dans les couplets mélodiques rapides.
+      </li>
+      <li>
+        <b>Autre :</b> On peut experimenter l’effet doublage
+        octavien : dupliquer la piste, la pitcher d’une octave (12 demi-tons) plus bas avec un formant conservé,
+        la saturer, la mettre en arrière plan – ça donne la voix “démon” qui double en bas. Souvent utilisé par
+        exemple sur les fins de phrases d’un couplet (on entend la voix principale + un growl grave dessous).
+        Jouer aussi sur l’Auto-Tune + Chop : par ex, couper la voix et répéter un segment pour faire un effet
+        stutter qui suit la gamme (le plugin Gross Beat de FL aide pour ce genre de glitch en rythme).
+      </li>
+    </ul>
+    <div class="mt-2 text-gray-700">
+      Pour l’effet autotune bien stylé, l’important est aussi que le chanteur/rappeur adapte sa technique :
+      souvent ils chantent avec des slides et en légèrement fausset exprès pour laisser l’Auto-Tune tirer les
+      notes, ce qui fait partie du son. Donc en mix, nous on s’assure juste de peaufiner (pas de latence, bonne
+      tonalité, nettoyé autour).
+      <br>
+      <br>
+      <b>Erreurs à éviter :</b> outre la tonalité mal réglée, faire attention à ce que l’effet ne rende pas la voix
+      incompréhensible – parfois à force d’harmoniser ou d’abuser du delay, on ne distingue plus les paroles.
+      À moins que ce soit voulu (il y a des morceaux très “vibe” où les paroles importent peu), veillez à ce que
+      dans le couplet, chaque mot important passe. Un petit coup de Transient Shaper en mode sharp peut
+      aider si Auto-Tune a arrondi toutes les attaques des mots (parce que ça quantifie tout, ça peut lisser un
+      peu le phrasé). Rehausser un hair 2-4 kHz peut améliorer l’articulation aussi.
+      <br>
+      <br>
+      En gros, pour l’autotune trap : assumez-le et soignez les à-côtés (spatialisation, doublages) pour créer
+      une véritable texture vocale futuriste.
+    </div>
+  </div>
+
+  <h3 class="text-xl font-semibold text-indigo-600 mb-3">Autres cas particuliers</h3>
+  <ul class="list-disc list-inside mb-4 ml-4 text-gray-700">
+    <li>
+      <b>Rap voix très grave (“monotone”)</b> : ex voix à la Rick Ross ou Alpha Wann, posée, basse. Ces voix
+      peuvent avoir beaucoup d’énergie &lt;100 Hz qui n’est pas utile. Bien couper ces graves pour laisser
+      la 808. On ajoute souvent de l’exciter sur les haut-médiums pour compenser le manque de
+      clarté naturelle (les voix graves ont moins d’harmoniques audibles dans le 3–5 kHz). Donc un
+      saturateur ou un exciter style Aphex peut faire merveille pour les rendre plus présentes sans
+      augmenter le niveau (sinon elles “mangent” le beat).
+    </li>
+    <li>
+      <b>Rap rapide (double time) articulé</b> : là le défi c’est l’articulation. Des artistes comme Eminem,
+      Tech N9ne etc. vont débiter extrêmement vite. Il faut énormément de de-ess parfois car le “ss”
+      accumulé devient un sifflement continu. Et compression rapide pour chaque syllabe sorte, mais
+      attention à l’effet lisp (cheveu sur la langue) si de-ess trop fort. Utiliser un EQ dynamique sur 4
+      kHz qui se déclenche sur chaque tch/sss costaud est une alternative plus fine. Parfois on peut
+      privilégier un compresseur multibande (un band sur le 4–8 kHz avec un ratio plus fort) plutôt
+      qu’un de-esser simple.
+    </li>
+    <li>
+      <b>Rap crié saturé (rage, screamo)</b> : tendance récente (City Morgue, Scarlxrd). La, la voix est
+      littéralement hurlée et souvent saturée intentionnellement. On traitera presque comme une
+      guitare : compresseur très fort, disto volontaire (par ex utiliser Soundtoys Decapitator ou Amp
+      sim sur la voix). Attention aux aigus, filtrer au-dessus de 8 kHz car une disto sur un cri génère
+      des ultrasoniques affreux. Beaucoup de reverb sombre aussi pour l’ambiance métal. Ce n’est plus
+      du rap “classique” mais c’est bon de mentionner que les principes s’adaptent – on sort un peu du
+      cadre intermédiaire rap standard, c’est du design sonore presque.
+    </li>
+  </ul>
+  <div class="mb-4 text-gray-700">
+    Pour conclure cette section, adaptez toujours les réglages à l’intention artistique. Un rap aggressif n’aura
+    pas les mêmes besoins qu’un rap chanmé love, etc. Ce qui compte c’est que la voix, agressive ou douce,
+    s’inscrive correctement dans le mix et véhicule l’énergie voulue. Les réglages ci-dessus vous donnent
+    des pistes pour y parvenir.
+  </div>
+</section>

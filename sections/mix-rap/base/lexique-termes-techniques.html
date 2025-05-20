@@ -1,0 +1,167 @@
+<section id="lexique-termes-techniques" class="bg-white rounded-2xl shadow-md p-8">
+  <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Lexique des termes techniques</h2>
+  <p class="mb-6 text-gray-800">
+    Pour conclure, voici un lexique des principaux termes techniques utilisés dans ce cours, avec leur
+    explication (en français) pour bien récapituler. Ce glossaire vous aidera à réviser les concepts clés du
+    mixage vocal :
+  </p>
+
+  <dl class="space-y-4 text-gray-700">
+
+    <dt class="font-bold text-lg">DAW (Digital Audio Workstation)</dt>
+    <dd>Station audionumérique, logiciel de production/mixage (ex : FL Studio, Reaper). C’est votre studio virtuel où vous enregistrez, éditez et mixez les pistes audio/
+    MIDI.</dd>
+
+    <dt class="font-bold text-lg">VST (Virtual Studio Technology)</dt>
+    <dd>Format de plugin audio (effet ou instrument virtuel) s’insérant
+    dans le DAW. Les plugins dont on a parlé (Waves, FabFilter, etc.) sont des VST. Ils permettent
+    d’étendre les capacités du DAW (EQ, reverb, etc. supplémentaires).</dd>
+
+    <dt class="font-bold text-lg">Track / Piste</dt>
+    <dd>Enregistrement audio (ou MIDI) individuel dans le projet. Ici on parle souvent de
+    la piste de voix (voice track) que l’on traite séparément des autres pistes (instru, etc.).</dd>
+
+    <dt class="font-bold text-lg">Insert (insérer un effet)</dt>
+    <dd>Placer un plugin directement dans la chaîne de signal d’une piste.
+    L’effet s’applique en série sur 100% du son de la piste. Ex: un compresseur en insert compresse
+    toute la voix qui passe dedans.</dd>
+
+    <dt class="font-bold text-lg">Send / Bus d’effet</dt>
+    <dd>Technique de routage où on envoie une partie du signal d’une piste vers une
+    piste auxiliaire contenant un effet. Permet d’ajouter l’effet en parallèle. Ex: on envoie 20% de la
+    voix vers un bus reverb (wet 100%), qu’on mélange à la voix dry restée intacte.</dd>
+
+    <dt class="font-bold text-lg">Égaliseur (EQ)</dt>
+    <dd>Outil modifiant l’équilibre fréquentiel d’un son en boostant ou coupant des
+    bandes de fréquences. Un égaliseur paramétrique permet de choisir précisément la fréquence,
+    la largeur de bande (Q) et le gain. Un filtre passe-haut (high-pass) laisse passer les hautes
+    fréquences et coupe les graves (utilisé pour éliminer les basses indésirables ). Un filtre
+    passe-bas (low-pass) fait l’inverse, on l’utilise rarement sur voix lead sauf effet (filtrage
+    téléphone). Shelf (étagère) : booste/atténue tout à partir d’une fréquence donnée vers le haut
+    (high-shelf) ou vers le bas (low-shelf). Notch / coupe-bande : coupe très étroit d’une fréquence
+    spécifique (pour enlever un larsen ou résonance précise).</dd>
+
+    <dt class="font-bold text-lg">Fréquences (Hz, kHz)</dt>
+    <dd>
+      L’audio est le mix de fréquences audibles (20 Hz à 20 kHz environ). En gros,<br>
+      &lt; 80 Hz = sub-basses, roulements quasi sentis plus qu’entendus (sur voix, ce sont les pops et rumbles),<br>
+      80–250 Hz = basses, fondamentales graves (voix masculines ont du contenu ici),<br>
+      250–500 Hz = bas-médiums, trop peut faire son “boîte” ou boueux,<br>
+      500–2 kHz = médiums, zone de corps de la voix, mais trop peut la rendre nasillarde ou megaphone,<br>
+      2–5 kHz = hauts-médiums, zone de clarté et d’attaque des consonnes, mais zone sensible de l’oreille (cris, sifflantes),<br>
+      5–10 kHz = aigus, sibilances, “air” commence à 8 kHz,<br>
+      10 kHz = ultra-aigus, air et finesse (au-delà de 16 kHz peu de contenu vocal utile excepté le souffle général).
+    </dd>
+
+    <dt class="font-bold text-lg">Compression / Compresseur</dt>
+    <dd>
+      Effet de réduction de la gamme dynamique d’un signal audio. Le compresseur atténue le niveau quand celui-ci dépasse un certain seuil, adoucissant les crêtes et équilibrant forts et faibles.
+      <ul class="list-disc ml-6">
+        <li><b>Threshold (Seuil)</b> : niveau au-delà duquel la compression s’applique . Ex: threshold -10 dB -> toute portion de la voix qui dépasse -10 dB sera compressée.</li>
+        <li><b>Ratio</b> : degré de compression, exprimé en rapport . Ex: 4:1 signifie que pour 4 dB au-dessus du threshold, on n’aura que 1 dB en sortie (donc a réduit l’excès de 3 dB). Un ratio ∞:1 équivaut à un limiteur (rien ne passe au-dessus du seuil).</li>
+        <li><b>Attack (Attaque)</b> : temps que met le compresseur à réagir après que le signal a franchi le seuil. En ms. Une attaque courte serre immédiatement (peut tuer les transitoires), une attaque longue laisse passer le début du son (transitoire non compressée) puis compresse la suite.</li>
+        <li><b>Release (Relâchement)</b> : temps pour revenir à l’état normal une fois que le signal redescend sous le seuil. En ms ou sec. Un release court remet vite le gain à 0 (peut causer pompage si trop court sur du matériel périodique), un release long lisse la compression mais peut cumuler si le signal repasse seuil souvent.</li>
+        <li><b>Make-up Gain</b> : gain de sortie post-compression pour compenser la baisse de volume globale due à la compression. Après avoir compressé (donc réduit les pics), on rehausse tout le signal pour que le niveau RMS remonte. C’est ce qui fait que tout semble plus fort et dense.</li>
+        <li><b>Knee (Coude)</b> : adoucit l’entrée en action de la compression autour du seuil. Un knee dur (0) = compression franche dès qu’on passe le seuil. Un knee doux = compression graduelle autour du seuil, plus musical sur voix souvent.</li>
+      </ul>
+      Types de compresseurs :
+      <ul class="list-disc ml-6">
+        <li>FET (Transistor à effet de champ, ex 1176) : ultra rapide, son “punchy/agressif”.</li>
+        <li>Opto (Optique, ex LA-2A) : plus lent, son doux, tendance à laisser passer transitoires et tasser sur la durée, souvent 2 boutons (gain et peak reduction).</li>
+        <li>VCA (Contrôle de voltage, ex SSL bus comp) : rapide et précis, bon pour contrôle transparent ou bus.</li>
+        <li>Vari-Mu (à lampes, ex Fairchild) : lent à modéré, très musical, colore chaudement.</li>
+      </ul>
+    </dd>
+
+    <dt class="font-bold text-lg">De-esser</dt>
+    <dd>
+      Compresseur spécialisé agissant sur la bande de fréquences des sibilantes (4–10 kHz) pour réduire les “ss”, “sh”. On règle une fréquence cible et un threshold ; quand l’énergie sur cette bande dépasse le seuil, le de-esser atténue. Permet d’adoucir les sifflantes sans toucher au reste. Parfois multibande ou dynamique eq peuvent remplir ce rôle.
+    </dd>
+
+    <dt class="font-bold text-lg">Gate / Noise Gate</dt>
+    <dd>
+      Porte de bruit. Un processeur de dynamique qui coupe le son en dessous d’un seuil. On l’utilise pour éliminer les bruits de fond entre les phrases vocales : réglé correctement, quand la personne ne parle pas, le gate ferme (silence total), et dès qu’elle reprend au-dessus du seuil, le gate ouvre et laisse passer la voix. Il faut bien ajuster l’attaque (qu’elle ne coupe pas l’attaque du premier mot) et la release (qu’elle ne coupe pas la fin des mots trop vite). Une alternative plus fine est l’expander (réduit au lieu de couper complètement).
+    </dd>
+
+    <dt class="font-bold text-lg">Saturation / Distorsion</dt>
+    <dd>
+      Effet qui alimente le signal au-delà de sa capacité linéaire, créant de nouvelles harmoniques (distorsion harmonique). En analogique, vient de lampes, transistors, bandes magnétiques poussés fort. Sur voix, la saturation légère (tape, tube) ajoute de la chaleur et de la densité, du “grain”. La distorsion forte (fuzz, clip) est utilisée créativement pour un effet lo-fi, criard ou radio saturée. Plugins comme FabFilter Saturn, Soundtoys Decapitator, ou simplement surcharger un préamp analogique. Bien dosée, une saturation harmonique peut rendre la voix plus présente sans augmentation de volume, en enrichissant son spectre.
+    </dd>
+
+    <dt class="font-bold text-lg">Exciter</dt>
+    <dd>
+      Type particulier de saturateur qui vise à exciter certaines fréquences en générant des harmoniques. Souvent multi-bande (comme dans Ozone ou Nectar). On l’emploie pour ajouter du “brillant” (exciter les aigus donne un effet d’air ou de clarté supplémentaire sans EQ, car au lieu de booster la fréquence existante on en crée de nouvelles plus haut). Attention, sur la voix, un exciter peut vite produire des sifflantes artificielles – à utiliser prudemment.
+    </dd>
+
+    <dt class="font-bold text-lg">Reverb (Réverbération)</dt>
+    <dd>
+      Effet simulant les réflexions d’un espace sur le son. Donne une sensation de profondeur et d’environnement.
+      <ul class="list-disc ml-6">
+        <li>Taille / Decay : durée de la réverbération (temps de réverb). Ex: 0.5s petite pièce, 2s grande salle, 10s cathédrale.</li>
+        <li>Pre-delay : délai initial avant que la réverb commence. Permet de laisser l’attaque directe audible avant l’arrivée de l’effet. Ex: 30 ms pré-delay sur voix pour intelligibilité.</li>
+        <li>Damping / High Cut : absorption des hautes fréquences au fil de la réverb. Haute valeur = réverb plus sombre (les aigus meurent vite, simulant pièces meublées ou vintage). Utile pour éviter sibilances réverbérées.</li>
+        <li>Types : Room (pièce petite/moyenne, bcp d’early reflections, decay court), Hall (grande salle ou hall de concert, decay long et lisse), Plate (réverb de plaque métallique, son dense, brillant, très utilisée en chant), Chamber (chambre de réverbération artificielle, son intermédiaire), Spring (ressort, très particulier métallique, plutôt instruments).</li>
+        <li>On distingue Early Reflections (premières réflexions distinctes) et Late (champ diffus). Certains plugins donnent le contrôle séparé (ex: Valhalla Room).</li>
+        <li>Mix (Dry/Wet) : proportion son direct vs son réverbéré. En insert on le règle souvent 10-40%. En send on met wet 100% sur le bus.</li>
+      </ul>
+    </dd>
+
+    <dt class="font-bold text-lg">Delay (Echo)</dt>
+    <dd>
+      Répétition(s) retardée(s) du son original. Principaux réglages :
+      <ul class="list-disc ml-6">
+        <li>Time : temps du délai. Souvent synchronisé en fraction de tempo (ex: 1/4 note delay) pour coller au rythme. Un delay très court (&lt;80 ms) fait un slapback (une seule réflexion rapide, comme un léger écho de pièce).</li>
+        <li>Feedback : pourcentage de réinjection de la sortie dans l’entrée, détermine le nombre de répétitions. 0% = un seul écho, 50% = plusieurs échos décroissants, 100% = auto-oscillation infinie (effet spécial).</li>
+        <li>Ping-pong : mode où l’écho alterne gauche/droite en stéréo, donnant un effet spatial. Utile pour remplir l’espace autour de la voix.</li>
+        <li>Filter : beaucoup de delays intègrent un filtre passe-bas ou passe-haut sur les répétitions pour les rendre plus “lo-fi” ou les reculer (très courant de couper les basses et aigus des delays pour qu’ils ne masquent pas la voix).</li>
+      </ul>
+      On utilise le delay sur voix pour répéter des fins de phrases ou donner un rythme. Par ex, un delay 1/4 sur un dernier mot qui se répète “en écho” trois fois dans l’espace. Souvent mis sur un send, wet 100%.
+    </dd>
+
+    <dt class="font-bold text-lg">Plosive</dt>
+    <dd>
+      Son “explosif” engendré par certaines consonnes (P, B) quand l’air frappe directement la capsule du micro, produisant un boom dans les graves. Visible comme un gros pic bas-fréquence dans la waveform. On les évite en enregistrement avec un filtre anti-pop et une bonne position. En mix, on les atténue via EQ (automatisation coup des graves sur l’instant) ou en éditant le clip gain localement (baisser l’intensité du “P”) ou via plugins dédiés (RX De-plosive). Important car un plosive non corrigé fait pomper les compresseurs et en mastering ça s’entend très fort.
+    </dd>
+
+    <dt class="font-bold text-lg">Sibilance</dt>
+    <dd>
+      Les sons de “s”, “ch”, “t” produisant un sifflement dans les hautes fréquences (4-10 kHz). Problématique quand trop prononcés (acoustique pièce vive, micro en accentue, ou chanteur avec dentition produisant bcp de sifflantes). On s’en occupe avec le de-esser. On peut aussi user d’EQ dynamique ou de volume automation fine. Il faut les réduire suffisamment pour ne plus gêner, mais pas les supprimer entièrement (sinon on ne comprend plus les consonnes, la voix zozote).
+    </dd>
+
+    <dt class="font-bold text-lg">Masking (Masquage)</dt>
+    <dd>
+      Quand deux sons ont des contenus fréquentiels chevauchants, ils peuvent se masquer l’un l’autre. Ex typique : la voix et un synthé pad qui ont tous deux de l’énergie vers 2 kHz – le mix paraît brouillon, on n’entend pas bien la voix car le synthé la couvre psycho-acoustiquement. Le travail d’un mixeur est de minimiser le masquage en équalisant, panoramant ou ajustant les volumes. Dans notre cours on a mentionné Neutron qui aide à repérer ces masquages . Un truc courant est de faire de la place aux fréquences de la voix dans l’instrumental (sidechain EQ ou cuts fixes). Attention, le masquage peut être fréquentiel ou temporel (une caisse claire forte peut masquer un mot si ça tombe exactement en même temps, d’où l’importance du placement rythmique ou du ducking).
+    </dd>
+
+    <dt class="font-bold text-lg">Phase (Phasing)</dt>
+    <dd>
+        Concernant la voix : si vous superposez deux signaux très similaires (ex: doublage quasi identique ou une reverb mal alignée), des déphasages peuvent survenir et altérer le timbre (fréquences qui s’annulent partiellement). Il faut s’assurer que les doublages soient bien en phase temporellement (alignés) ou assez différents pour ne pas poser problème. Un inversion de phase (polarity) peut être testée si la voix doublée sonne creuse – parfois un mic invert peut régler un creux phasique. Sur les effets, par ex le Doubler utilise du micro delay pour écarter, attention qu’à la mono ça peut faire du phasing. Vérifiez toujours le mix en mono pour repérer d’éventuelles annulations sur la voix.
+    </dd>
+
+    <dt class="font-bold text-lg">Headroom / Marge</dt>
+    <dd>
+        Différence entre le niveau de crête du signal et le 0 dBFS (limite numérique). On veut conserver du headroom à chaque étape pour éviter le clipping. En mix, on vise souvent un master peaking vers -6 dBFS avant mastering (donc la voix et le beat équilibrés laissent ~6 dB de marge). En mastering, on finit souvent à -0.1 dBFS (peak) avec un ceiling, et on a un headroom de sécurité de 1 dB pour conversion (ex: on met ceiling -1 dB pour respecter certaines normes streaming). Dans la chaîne plugin, chaque plugin a besoin d’un peu de headroom en entrée pour ne pas saturer (sauf si c’est voulu style saturator). Le gain staging, c’est gérer cette marge.
+    </dd>
+
+    <dt class="font-bold text-lg">Loudness (LUFS, dB RMS)</dt>
+    <dd>
+        Niveau sonore perçu d’un mix. Mesuré en LUFS (Loudness Units Full Scale) aujourd’hui. Un morceau rap commercial peut être à -9 LUFS intégré ou même -8 (très loud). En mix, la voix doit ressortir dans cette loudness finale. On ne “vise” pas la loudness en mix (on laisse ça au mastering), mais c’est bien d’être conscient que plus le master sera loud, plus la voix (et tout) sera écrasée par le limiteur. Donc anticiper en mixant la voix un poil plus fort ou en la compressant un peu plus peut parfois aider à ce qu’après mastering elle reste en avant.
+    </dd>
+
+    <dt class="font-bold text-lg">Automation</dt>
+    <dd>
+        Action de faire évoluer un paramètre dans le temps automatiquement. En mix voix, c’est vital pour : ajuster le volume de certaines phrases (volume automation ou clip gain), ouvrir/fermer progressivement une reverb (send automation), changer le réglage d’un plugin pour un segment (ex: retune speed plus lent sur un couplet, plus rapide sur refrain – on peut automatiser la valeur). C’est ce qui rend un mix vivant et parfaitement calibré, là où les traitements statiques montrent leurs limites.
+    </dd>
+
+    <dt class="font-bold text-lg">Reference Track</dt>
+    <dd>
+        Morceau commercial ou mix de référence qu’on utilise pour comparer et guider nos choix. Ex: vous mixez un rap trap, vous prenez un son de Travis Scott et comparez la balance de la voix, la couleur. Ça permet de détecter si on manque de basses, ou si la voix est trop en retrait, etc. Se fait avec des outils d’écoute A/B ou simplement en important le fichier dans le projet (niveau ajusté). Attention à bien baisser la référence au même niveau que votre mix non masterisé (car la réf est masterisée). C’est un outil d’apprentissage de l’oreille.
+    </dd>
+
+    <div class="mt-6">
+        <p class="text-gray-700">
+            Ce lexique couvre les principaux termes croisés dans ce cours. Vous voilà armé du vocabulaire technique pour comprendre et communiquer lors de vos sessions de mixage
+        </p>
+    </div>
+  </dl>
+</section>

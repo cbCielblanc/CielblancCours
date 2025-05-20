@@ -1,0 +1,55 @@
+<section id="nettoyage" class="bg-white rounded-2xl shadow-md p-8">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-2">Nettoyage de la voix : préparation d’une piste vocale propre</h2>
+      <p class="mb-4 text-gray-700">
+        Avant d’appliquer des traitements créatifs, il faut s’assurer que la piste vocale brute est aussi propre que possible. Le nettoyage consiste à éliminer ou réduire les éléments indésirables : bruits de fond, silences respiratoires, consonnes sifflantes agressives (sibilances), etc. Cela implique l’utilisation d’outils comme la porte de bruit (noise gate), le de-esser et éventuellement des plugins de réduction de bruit plus avancés.
+      </p>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Utiliser une noise gate (porte de bruit)</h3>
+        <p class="text-gray-700 mb-2">
+          Une noise gate coupe automatiquement le son en dessous d’un certain seuil de volume, empêchant ainsi les sons faibles ou parasites de passer. <br>
+          <span class="italic text-gray-500">Exemple de plugins : FabFilter Pro-G, Waves C1 Gate, ReaGate (Reaper).</span>
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-2">
+          <li>Réglez le seuil (threshold) juste au-dessus du bruit de fond</li>
+          <li>Ratio élevé pour bien couper le son indésirable</li>
+          <li>Attaque rapide (quelques ms), release 50–100 ms pour garder un son naturel</li>
+          <li>Utilisez le hold pour éviter les coupures trop brusques</li>
+          <li>Privilégiez le réglage à l’oreille, et comparez parfois avec un fade out manuel</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl mb-2 text-sm text-gray-800">
+          <b>Dans FL Studio :</b> Fruity Limiter (mode Gate) ou Fruity Gate. Insérez sur la piste vocale et ajustez Threshold/Release.<br>
+          <b>Dans Reaper :</b> ReaGate, en début de chaîne d’effet sur la piste voix, avec possibilité d’écoute de la clé (sidechain).
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Réduction des sibilances (De-esser)</h3>
+        <p class="text-gray-700 mb-2">
+          Les sibilances (“s”, “ch”, “t”, “f”) sont des sifflements aigus souvent désagréables. Le de-esser est un compresseur dynamique ciblant les fréquences des sifflantes (généralement 6–10 kHz), atténuant ces pics dès qu’ils dépassent un seuil.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-2">
+          <li>Réduisez juste ce qu’il faut (~3 à 8 dB) sans altérer la voix</li>
+          <li>Identifiez la fréquence exacte des sibilances pour cibler le traitement</li>
+          <li>FabFilter Pro-DS, Waves DeEsser, iZotope Nectar, ou EQ dynamique paramétré à 7–8 kHz</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl mb-2 text-sm text-gray-800">
+          <b>FL Studio :</b> Pas de de-esser natif dédié, utilisez Maximus (preset De-esser) ou plugin tiers. À placer après EQ et compresseur.<br>
+          <b>Reaper :</b> ReaXcomp (multibande) ou plugin VST dédié, à placer avant/après compression selon le contexte.
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Réduction du bruit et traitement des silences</h3>
+        <p class="text-gray-700 mb-2">
+          Même après un gate, il peut rester un bruit de fond constant. Utilisez des plugins de réduction de bruit (Waves Clarity VX, iZotope RX Voice De-noise) pour apprendre le profil de bruit et le soustraire du signal. Astuce : traitez avec modération pour éviter les artefacts.
+        </p>
+        <div class="bg-indigo-50 p-4 rounded-xl mb-2 text-sm text-gray-800">
+          <b>FL Studio :</b> Edison &gt; fonction “denoise” (prendre un échantillon de silence, puis réduire).<br>
+          <b>Reaper :</b> ReaFIR en mode “Subtract” (apprendre le bruit et filtrer).
+        </div>
+        <p class="text-gray-700 mt-2">
+          Enfin, pensez à éditer manuellement les silences (découpes et fondus), pour garder un rendu naturel.
+        </p>
+      </div>
+    </section>

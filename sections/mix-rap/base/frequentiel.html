@@ -1,0 +1,78 @@
+<section id="frequentiel" class="bg-white rounded-2xl shadow-md p-8">
+      <h2 class="text-2xl font-semibold text-indigo-700 mb-2">Traitement fréquentiel : égalisation statique, dynamique et formants</h2>
+      <p class="mb-4 text-gray-700">
+        Le traitement fréquentiel consiste à sculpter le contenu en fréquences de la voix pour corriger ses défauts et l’intégrer au mieux dans le mix. Cela se fait d’abord via l’égalisation (EQ), à la fois statique (ajustements fixes) et éventuellement dynamique (ajustements variables selon le signal). On abordera aussi la notion de formants, qui concerne le timbre vocal indépendant de la hauteur des notes – utile pour certaines corrections ou effets.
+      </p>
+      <!-- IMAGE EQ -->
+      <div class="flex flex-col items-center mb-6">
+        <img src="./2c7b0156-a0a9-44a1-9679-c3af51cde55e.png" alt="EQ FabFilter Pro-Q 3" class="rounded-xl shadow-md border mb-2 max-h-72 object-contain">
+        <span class="text-xs text-gray-500">Interface du FabFilter Pro-Q 3 appliqué sur une voix : exemple d’égalisation corrective.</span>
+      </div>
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Égalisation corrective (EQ statique)</h3>
+        <p class="text-gray-700 mb-2">
+          L’égalisation permet d’amplifier ou atténuer certaines bandes de fréquences. En mode statique, les réglages sont fixes dans le temps. On l’utilise d’abord de manière corrective : enlever les fréquences indésirables et éventuellement booster légèrement les zones qui mettent la voix en valeur. Il est souvent recommandé de procéder par petites touches pour ne pas dénaturer la voix – idéalement, si l’enregistrement est bon, de légers ajustements suffiront.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-2">
+          <li><b>Graves inutiles (&lt; ~80 Hz)</b> : filtre coupe-bas à 75-120 Hz pour enlever le ronflement, les plosives et grondements.</li>
+          <li><b>Bas-médiums (~100–150 Hz)</b> : ajuster selon la voix ; petit cut à 120 Hz si c’est boomy, ou laisser/booster si la voix manque de corps.</li>
+          <li><b>Bas-médiums envahissants (300–600 Hz)</b> : zone du “placard”, un creux subtil (~‐3 dB) vers 300-500 Hz pour éviter un effet étouffé.</li>
+          <li><b>Médiums (800 Hz – 2 kHz)</b> : contrôler les résonances nasales (petit cut à 1 kHz si besoin) ou booster un peu pour aider la diction.</li>
+          <li><b>Hauts-médiums / présence (3 – 5 kHz)</b> : petit boost vers 4 kHz pour l’attaque/présence, mais attention à l’agressivité.</li>
+          <li><b>Sibilances (5 – 10 kHz)</b> : ne pas trop couper statiquement, utiliser surtout un de-esser, éventuellement adoucir légèrement avec EQ.</li>
+          <li><b>Air / Brillance (&gt; 10 kHz)</b> : shelf +2 dB à 12 kHz pour ajouter de l’air, ou low-pass léger à 16 kHz si trop brillant/souffle.</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800 mb-2">
+          <b>Conseil :</b> Les EQ paramétriques (FabFilter Pro-Q 3, EQ natifs FL Studio/Reaper…) permettent une correction précise.<br>
+          Mixez à l’oreille en contexte, pas en solo ! Corrigez ce qui gêne, mais n’exagérez aucune courbe sans nécessité.
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-indigo-600 mb-1">EQ dans FL Studio</h3>
+        <ul class="list-disc list-inside text-gray-700 mb-2">
+          <li>Utilisez Parametric EQ 2 (7 bandes), activez “High precision” si besoin.</li>
+          <li>Visualisez et comparez le spectre d’autres pistes (sidechain) pour éviter les masquages.</li>
+          <li>Deux EQs possibles : un correctif, un de coloration (par ex. shelf à 12 kHz pour l’airy en fin de chaîne).</li>
+        </ul>
+      </div>
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-indigo-600 mb-1">EQ dans Reaper</h3>
+        <ul class="list-disc list-inside text-gray-700 mb-2">
+          <li>ReaEQ (paramétrique, bandes infinies), très efficace pour la correction.</li>
+          <li>Automation facile des paramètres (ex. baisser une bande temporairement).</li>
+          <li>Plugins tiers : Waves API 550 (EQ vintage) ou autres.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">EQ dynamique : cibler les résonances variables</h3>
+        <p class="text-gray-700 mb-2">
+          Contrairement à l’EQ statique, l’EQ dynamique n’agit que lorsque la fréquence ciblée dépasse un seuil, ce qui permet de traiter des pics récurrents sans toucher au reste de la voix. C’est le compromis idéal pour les résonances intermittentes.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li>Pratique pour traiter un pic gênant (ex : 500 Hz sur certains mots seulement) ou pour un de-esser “sur-mesure”.</li>
+          <li>Plugins : FabFilter Pro-Q 3 (mode dynamique par bande), Waves F6, TDR Nova (gratuit), iZotope Neutron.</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800">
+          Réglez la fréquence cible, le seuil, et le ratio comme un compresseur, pour une action automatique et transparente.
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-1">Formants et filtres formantiques</h3>
+        <p class="text-gray-700 mb-2">
+          Les formants sont les résonances naturelles de la voix : ils définissent le timbre, indépendamment de la note chantée.<br>
+          Modifier les formants, c’est changer la couleur vocale (plus clair/sombre, cartoon, grave…). Les plugins dédiés (Antares Auto-Tune Pro, Little AlterBoy, Nectar, etc.) permettent de préserver ou d’altérer le timbre à volonté.
+        </p>
+        <ul class="list-disc list-inside text-gray-600 mb-2">
+          <li>Préserver les formants lors de la correction de pitch évite le fameux effet “Mickey Mouse”.</li>
+          <li>Effet créatif : “formant shifting” pour doubler la voix plus grave/aiguë, styliser des adlibs, intros, etc.</li>
+          <li>FL Studio : NewTone, éditeur audio – permet de décaler le formant indépendamment du pitch.</li>
+          <li>Reaper : algorithme Elastique Pro avec “formant shift”.</li>
+        </ul>
+        <div class="bg-indigo-50 p-4 rounded-xl text-sm text-gray-800">
+          <b>À retenir :</b> Les formants font l’identité vocale : on veille à ne pas les dénaturer sauf effet voulu. Expérimentez en fin de mix pour des textures uniques !
+        </div>
+      </div>
+    </section>
